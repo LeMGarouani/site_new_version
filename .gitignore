@@ -1,10 +1,7 @@
-# IDEs
-.idea/
-
-# Hugo
-resources/
-public/
-jsconfig.json
-node_modules/
-go.sum
+node_modules
+public
+resources
+!content/en/resources
+.netlify
 .hugo_build.lock
+static/images/homepage/cv.svg
