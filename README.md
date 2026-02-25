@@ -4,7 +4,7 @@
 
 Personal website using the Hugo [docks](https://getdoks.org/) theme.
 
-## How to update?
+## How to update?-
 
 This website is generated using [hugo](https://gohugo.io/), a static website generation framework.
 
