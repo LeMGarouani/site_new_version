@@ -1,13 +1,13 @@
-name = "Doks child theme"
+name = "Doks"
 license = "MIT"
-licenselink = "https://github.com/h-enk/doks/blob/master/LICENSE"
-description = "Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+licenselink = "https://github.com/thuliteio/doks/blob/master/LICENSE"
+description = "Build beautiful, high-performance documentation websites with Doks."
 
-homepage = "https://github.com/h-enk/doks-child-theme"
-demosite = "https://doks-child-theme.netlify.app"
+homepage = "https://github.com/thuliteio/doks"
+demosite = "https://doks.thulite.io/"
 
 tags = ["landing page", "documentation", "blog", "minimal", "modern", "customizable", "search", "dark mode", "bootstrap"]
-features = ["security aware", "fast by default", "seo-ready", "development tools", "bootstrap framework", "netlify-ready", "full text search", "page layouts", "dark mode"]
+features = ["secure by design", "fast by default", "search optimized", "full text search", "page layouts", "dark mode"]
 
 [author]
   name = "Henk Verlinde"
