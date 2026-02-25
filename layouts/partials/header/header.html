@@ -71,7 +71,7 @@
               </li>
             {{ else }}
               <li class="nav-item">
-                <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Pre | safeHTML }}{{ .Name }}{{ .Post | safeHTML }}</a>
               </li>
             {{ end }}
           {{ end -}}
