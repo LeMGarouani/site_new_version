@@ -1,6 +1,6 @@
-# Moncef GAROUANI
+# Hugo
 title = "Moncef GAROUANI"
-description = ""
+description = "Congrats on setting up a new Doks project!"
 images = ["cover.png"]
 
 # mainSections
@@ -10,14 +10,23 @@ mainSections = ["docs"]
 math = false # false (default) or true
 mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
+[social]
+  twitter = "getdoks"
 
-
-
+# Doks (@thulite/doks-core)
+[doks]
+  # Color mode
+  colorMode = "auto" # auto (default), light or dark
+  colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
 
   # Navbar
   navbarSticky = true # true (default) or false
   containerBreakpoint = "fluid" # "", "sm", "md", "lg", "xl", "xxl", or "fluid" (default)
 
+  ## Button
+  navBarButton = false # false (default) or true
+  navBarButtonUrl = "/docs/prologue/introduction/"
+  navBarButtonText = "Get started"
 
   # FlexSearch
   flexSearch = true # true (default) or false
@@ -71,10 +80,11 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
   editPage = false # false (default) or true
   lastMod = false # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/LeMGarouani"
+  docsRepo = "https://github.com/h-enk/doks"
   docsRepoBranch = "main" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
+  krokiURL = "https://kroki.io" # "https://kroki.io" (default) or custom URL like http://localhost:8000.
 
   # SCSS colors
   # backGround = "yellowgreen"
@@ -117,7 +127,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 # SEO (@thulite/seo)
 [seo]
   [seo.title]
-    separator = "" # "||" (default)
+    separator = "" # "|" (default)
     suffix = "" # title hugo.toml (default)
   [seo.description]
     summaryFallback = "" # "" (default)
