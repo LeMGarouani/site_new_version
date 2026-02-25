@@ -29,6 +29,9 @@ section = ["HTML", "RSS", "SITEMAP"]
 suffixes = [""]
 delimiter = ""
 
+[params.carouselHomepage]
+enable = false  # default is true
+
 # add output format for netlify _redirects
 [outputFormats.REDIRECTS]
 mediaType = "text/netlify"
