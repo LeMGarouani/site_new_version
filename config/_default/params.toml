@@ -13,6 +13,7 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 
 
+
   # Navbar
   navbarSticky = true # true (default) or false
   containerBreakpoint = "fluid" # "", "sm", "md", "lg", "xl", "xxl", or "fluid" (default)
