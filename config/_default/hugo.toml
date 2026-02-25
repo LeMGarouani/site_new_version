@@ -1,5 +1,8 @@
-title = "My Docs"
-baseurl = "http://localhost/"
+title = "Moncef GAROUANI"
+
+baseurl = "/"
+custom_css = ["css/font-awesome.min.css"]
+
 disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
@@ -15,7 +18,25 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2020-2026 Thulite"
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Footer
+footer = "Copyright © 2026 Moncef GAROUANI"
+
+# Feed
+copyRight = "Copyright © 2026 Moncef GAROUANI"
 
 [build.buildStats]
   enable = true
