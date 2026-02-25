@@ -7,9 +7,9 @@
 
 
 [[main]]
-  name = ""
+  name = "Home"
+  pre = "<img src=\"/images/homepage/home.png\" height=\"40px\" width=\"40px\" /> "
   url = "/"
-  pre = "<img src='/images/homepage/home.png' height='80px' style='vertical-align:middle;' /> "
   weight = 10
   
   
