@@ -6,9 +6,9 @@
 #   url = "/docs/lorem/"
 
 
-[[social]]
+[[docs]]
   name = "Home"
-  pre = "<img src=\"/images/homepage/home.png\" height=\"40px\" width=\"40px\" /> "
+  pre = "<img src=\"/images/homepage/home.png\" height=\"26px\" width=\"26px\" /> "
   url = "/"
   weight = 10
   
