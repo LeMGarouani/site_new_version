@@ -1,121 +1,103 @@
-baseurl = "/"
-author = "en"
-
-custom_css = ["css/font-awesome.min.css"]
-
-
-canonifyURLs = false
+title = "My Docs"
+baseurl = "http://localhost/"
 disableAliases = true
 disableHugoGeneratorInject = true
+# disableKinds = ["taxonomy", "term"]
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
 languageCode = "en-US"
-paginate = 7
 rssLimit = 10
+summarylength = 20 # 70 (default)
 
 # Multilingual
 defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
-# defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
-# add redirects/headers
+copyRight = "Copyright (c) 2020-2026 Thulite"
+
+[build.buildStats]
+  enable = true
+
 [outputs]
-home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
-section = ["HTML", "RSS", "SITEMAP"]
+  home = ["html", "rss", "sitemap", "searchIndex", "llms"]
+  page = ["html", "markdown"]
+  section = ["html", "rss", "sitemap"]
+  taxonomy = ["html", "rss", "sitemap"]
+  term = ["html", "rss", "sitemap"]
 
-# remove .{ext} from text/netlify
-[mediaTypes."text/netlify"]
-suffixes = [""]
-delimiter = ""
+[outputFormats.searchIndex]
+  mediaType = "application/json"
+  baseName = "search-index"
+  isPlainText = true
+  notAlternative = true
 
-[params.carouselHomepage]
-enable = false  # default is true
+[outputFormats.markdown]
+  baseName = "index"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/markdown"
 
-# add output format for netlify _redirects
-[outputFormats.REDIRECTS]
-mediaType = "text/netlify"
-baseName = "_redirects"
-isPlainText = true
-notAlternative = true
+[outputFormats.llms]
+  baseName = "llms"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/plain"
 
-# add output format for netlify _headers
-[outputFormats.HEADERS]
-mediaType = "text/netlify"
-baseName = "_headers"
-isPlainText = true
-notAlternative = true
-
-# add output format for section sitemap.xml
-[outputFormats.SITEMAP]
-mediaType = "application/xml"
-baseName = "sitemap"
-isHTML = false
-isPlainText = true
-noUgly = true
-rel  = "sitemap"
-
-[caches]
-  [caches.getjson]
-    dir = ":cacheDir/:project"
-    maxAge = "10s"
+# Add output format for section sitemap.xml
+[outputFormats.sitemap]
+  mediaType = "application/xml"
+  baseName = "sitemap"
+  isHTML = false
+  isPlainText = true
+  noUgly = true
+  rel  = "sitemap"
 
 [sitemap]
-  changefreq = "weekly"
+  changefreq = "monthly"
   filename = "sitemap.xml"
   priority = 0.5
 
+[caches]
+  [caches.getresource]
+    dir = ":cacheDir/:project"
+    maxAge = -1 # "30m"
+
 [taxonomies]
   contributor = "contributors"
+  category = "categories"
+  tag = "tags"
 
 [permalinks]
-  blog = "/blog/:title/"
-# docs = "/docs/1.0/:sections[1:]/:title/"
+  blog = "/blog/:slug/"
+  docs = "/docs/:sections[1:]/:slug/"
+# docs = "/docs/1.0/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
+  keepComments = true # If set to false, build signatures are removed
   keepWhitespace = false
 
-[module]
-  [[module.mounts]]
-    source = "node_modules/@hyas/doks/archetypes"
-    target = "archetypes"
-  [[module.mounts]]
-    source = "node_modules/@hyas/doks/assets"
-    target = "assets"
-#  [[module.mounts]]
-#    source = "node_modules/@hyas/doks/content"
-#    target = "content"
-  [[module.mounts]]
-    source = "node_modules/@hyas/doks/data"
-    target = "data"
-  [[module.mounts]]
-    source = "node_modules/@hyas/doks/layouts"
-    target = "layouts"
-  [[module.mounts]]
-    source = "node_modules/@hyas/doks/static"
-    target = "static"
+[pagination]
+  pagerSize = 10
 
-  [[module.mounts]]
-    source = "node_modules/katex"
-    target = "assets/js/vendor/katex"
-  [[module.mounts]]
-    source = "node_modules/mermaid"
-    target = "assets/js/vendor/mermaid"
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-#  [[module.mounts]]
-#    source = "content"
-#    target = "content"
-  [[module.mounts]]
-    source = "layouts"
-    target = "layouts"
-  [[module.mounts]]
-    source = "archetypes"
-    target = "archetypes"
-  [[module.mounts]]
-    source = "data"
-    target = "data"
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+    [[related.indices]]
+      name = "categories"
+      weight = 100
+    [[related.indices]]
+      name = "tags"
+      weight = 80
+    [[related.indices]]
+      name = "date"
+      weight = 10
+
+[imaging]
+  anchor = "Center"
+  bgColor = "#ffffff"
+  hint = "photo"
+  quality = 85
+  resampleFilter = "Lanczos"
