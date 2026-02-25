@@ -7,11 +7,18 @@
 
 
 [[main]]
+  name = ""
+  url = "/"
+  weight = 10
+  pre = "<img src='/images/homepage/home.png' height='24px' />"
+  
+  
+[[main]]
   name = "Publications"
   url = "/publications/"
   weight = 10
-
-
+  
+  
 [[main]]
   name = "Talks"
   url = "/talks/"
