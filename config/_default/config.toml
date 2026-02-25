@@ -73,10 +73,6 @@ rel  = "sitemap"
   keepWhitespace = false
 
 [module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.80.0"
-    max = ""
   [[module.mounts]]
     source = "node_modules/@hyas/doks/archetypes"
     target = "archetypes"
