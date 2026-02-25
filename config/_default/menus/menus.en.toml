@@ -9,35 +9,35 @@
 [[main]]
   name = ""
   url = "/"
-  pre = "<img src='/images/homepage/home.png' height='20px' style='vertical-align:middle;' /> "
-  weight = 20
+  pre = "<img src='/images/homepage/home.png' height='80px' style='vertical-align:middle;' /> "
+  weight = 10
   
   
 [[main]]
   name = "Publications"
   url = "/publications/"
-  weight = 10
+  weight = 20
   
   
 [[main]]
   name = "Talks"
   url = "/talks/"
-  weight = 20
+  weight = 30
 
 [[main]]
   name = "Teaching & Supervision"
   url = "/teaching/"
-  weight = 30
+  weight = 40
 
 [[main]]
   name = "CV"
   url = "/CV/"
-  weight = 30
+  weight = 50
 
 [[main]]
   name = "Contact"
   url = "/contact/"
-  weight = 50
+  weight = 60
 
 
 
